@@ -1,9 +1,19 @@
 # PKU-TANGENT nlp-tutorial
 
 本教程供新加入 TANGENT 实验室的同学入门 NLP 使用
-test
 
-
+- [PKU-TANGENT nlp-tutorial](#pku-tangent-nlp-tutorial)
+  - [写在前面](#写在前面)
+  - [基础知识](#基础知识)
+    - [机器学习](#机器学习)
+    - [深度学习](#深度学习)
+    - [自然语言处理](#自然语言处理)
+  - [文献阅读](#文献阅读)
+    - [Basic](#basic)
+    - [前沿进展](#前沿进展)
+    - [工具](#工具)
+  - [动手实践](#动手实践)
+  - [本仓库的使用说明](#本仓库的使用说明)
 
 ## 写在前面
 
@@ -11,9 +21,8 @@ test
 
 1. 绝对优秀的信息检索能力（大学生最最基本的能力）
 2. 优秀的英语阅读水平（你阅读的文献基本都将是英文的）
-3. 良好的编程能力（限 Python，如果会一两种深度学习框架最好）以及良好的代码规范
+3. 良好的编程能力（限 Python，如果会一两种深度学习框架最好）以及良好的代码规范([python](https://zh-google-styleguide.readthedocs.io/en/latest/google-python-styleguide/python_style_rules/)、[c++](https://zh-google-styleguide.readthedocs.io/en/latest/google-cpp-styleguide/contents/))
 4. 数学基础（高等数学、线性代数（主要是矩阵运算）、概率论与统计）
-
 
 
 
@@ -84,3 +93,11 @@ stanford cs224n
 任务四：Transformer
 
 请结合 Attention Is All You Need 原论文，读懂 The Annotated Transformer（http://nlp.seas.harvard.edu/2018/04/03/attention.html）
+
+
+
+## 本仓库的使用说明
+
+1. 有问题就提在issues里面，同理你也可以在issues里面检索是否已经有你遇到的问题；
+2. main分支无法直接修改，所有修改均需要通过提交`Pull requests`来实现，必须选择至少一个reviewer，推荐选择大师兄`Yifan-Song793`来review；
+3. git commit的规范看[这里](https://juejin.cn/post/6844903793033756680)，禁止使用意义不明的test、add等语句。
