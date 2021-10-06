@@ -46,7 +46,7 @@ stanford cs224n
 
 - 自然语言处理相关会议：ACL, EMNLP, NAACL
 - ML 理论：ICML, NeurIPS, ICLR
-- 偏应用：AAAI（读作 triple AI，不读 A A A I，不累吗？）, IJCAI
+- 偏应用：AAAI（读作 A double A I，不读 A A A I，不累吗？）, IJCAI
 
 其中，ACL 系会议提供 anthology (https://aclweb.org/anthology/)
 
