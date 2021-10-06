@@ -45,7 +45,7 @@ Pytorch Tutorials（建议动手做一做与 nlp 相关的几个 tutorial，弄�
 ### 自然语言处理
 
 stanford cs224n
-
+cmu cs 11-747
 
 
 ## 文献阅读
