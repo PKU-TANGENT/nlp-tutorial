@@ -79,19 +79,29 @@
 
 ## 动手实践
 
-任务一：基于深度学习的文本分类
+### 任务一：基于深度学习的文本分类
 
 
 
-任务二：基于 LSTM-CRF 的命名实体识别
+
+### 任务二：基于 LSTM-CRF 的命名实体识别
 
 
 
-任务三：NLG
+
+### 任务三：新闻标题生成
+
+摘要和翻译是文本生成中比较主流的两大任务，在这里我们选取一个简单的新闻标题生成任务作为入门项目。
+
+数据地址： http://www.sogou.com/labs/resource/cs.php   完整版(648M)
+
+参考文献：Generating News Headlines with Recurrent Neural Networks （https://arxiv.org/abs/1512.01712）
+
+可以先基于RNN实现上述模型，在算力允许的情况下再尝试预训练模型。
 
 
 
-任务四：Transformer
+### 任务四：Transformer
 
 请结合 Attention Is All You Need 原论文，读懂 The Annotated Transformer（http://nlp.seas.harvard.edu/2018/04/03/attention.html）
 
