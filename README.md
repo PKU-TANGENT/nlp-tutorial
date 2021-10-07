@@ -38,14 +38,15 @@
 
 ### 深度学习
 
+书：Deep Learning（GoodFellow, Bengio, Courville），神经网络与深度学习（邱锡鹏）
 
-
-Pytorch Tutorials（建议动手做一做与 nlp 相关的几个 tutorial，弄懂每一行代码）
+教程：Pytorch Tutorials（建议动手做一做与 nlp 相关的几个 tutorial，弄懂每一行代码）
 
 ### 自然语言处理
 
-stanford cs224n
+网课：stanford cs224n；cmu cs 11-747
 
+书：统计自然语言处理（宗成庆），现代自然语言生成（黄民烈），自然语言处理：基于预训练模型的方法（车万翔）
 
 
 ## 文献阅读
