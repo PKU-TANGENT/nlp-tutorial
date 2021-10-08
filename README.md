@@ -113,7 +113,7 @@ Neural Architectures for Named Entity Recognition (https://arxiv.org/pdf/1603.01
 
 数据地址： http://www.sogou.com/labs/resource/cs.php   完整版(648M)
 
-参考文献：Generating News Headlines with Recurrent Neural Networks （https://arxiv.org/abs/1512.01712）
+参考文献：Generating News Headlines with Recurrent Neural Networks (https://arxiv.org/abs/1512.01712)
 
 可以先基于RNN实现上述模型，在算力允许的情况下再尝试预训练模型。
 
@@ -121,7 +121,7 @@ Neural Architectures for Named Entity Recognition (https://arxiv.org/pdf/1603.01
 
 ### 任务四：Transformer
 
-请结合 Attention Is All You Need 原论文，读懂 The Annotated Transformer（http://nlp.seas.harvard.edu/2018/04/03/attention.html）
+请结合 Attention Is All You Need 原论文，读懂 The Annotated Transformer (http://nlp.seas.harvard.edu/2018/04/03/attention.html)
 
 
 
