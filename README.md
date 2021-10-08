@@ -13,6 +13,10 @@
     - [前沿进展](#前沿进展)
     - [工具](#工具)
   - [动手实践](#动手实践)
+    - [任务一：基于深度学习的文本分类](#任务一基于深度学习的文本分类)
+    - [任务二：基于 LSTM-CRF 的命名实体识别](#任务二基于-lstm-crf-的命名实体识别)
+    - [任务三：新闻标题生成](#任务三新闻标题生成)
+    - [任务四：Transformer](#任务四transformer)
   - [本仓库的使用说明](#本仓库的使用说明)
 
 ## 写在前面
@@ -24,6 +28,7 @@
 3. 良好的编程能力（限 Python，如果会一两种深度学习框架最好）以及良好的代码规范([python](https://zh-google-styleguide.readthedocs.io/en/latest/google-python-styleguide/python_style_rules/)、[c++](https://zh-google-styleguide.readthedocs.io/en/latest/google-cpp-styleguide/contents/))
 4. 数学基础（高等数学、线性代数（主要是矩阵运算）、概率论与统计）
 
+如需 GPU，请联系实验室服务器管理员
 
 
 ## 基础知识
@@ -81,12 +86,25 @@
 
 ### 任务一：基于深度学习的文本分类
 
+文本分类是入门 NLP 的一个好的开始，同时 NLU（自然语言理解）任务本质上来说都可以归类为文本分类。请使用 CNN 或 RNN 完成 Kaggle 上一个简单的文本分类任务。
 
+任务描述 & 数据集：https://www.kaggle.com/c/sentiment-analysis-on-movie-reviews/
+
+参考文献：
+Convolutional Neural Networks for Sentence Classification (https://aclanthology.org/D14-1181/)
+Recurrent Convolutional Neural Networks for Text Classification (https://www.deeplearningitalia.com/wp-content/uploads/2018/03/Recurrent-Convolutional-Neural-Networks-for-Text-Classification.pdf)
 
 
 ### 任务二：基于 LSTM-CRF 的命名实体识别
 
+在 NLP 中，结构预测（Structured Prediction）是指输出空间为结构化对象的一类任务，包括命名实体识别、关系抽取、共指消解等子任务，命名实体识别又属于序列标注问题。请实现简单的基于 LSTM-CRF 的命名实体识别
 
+任务描述 & 数据集：https://www.clips.uantwerpen.be/conll2003/ner/
+
+参考文献：
+Neural Architectures for Named Entity Recognition (https://arxiv.org/pdf/1603.01360.pdf)
+
+建议：循序渐进，先实现 LSTM NER 模型，再在其基础上加上 CRF 层。
 
 
 ### 任务三：新闻标题生成
