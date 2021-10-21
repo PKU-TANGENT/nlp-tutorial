@@ -49,6 +49,8 @@
 
 ### 自然语言处理
 
+快速了解深度学习时代 NLP 发展历史：（前几天发现了一个挺好的博客）A Review of the Neural History of Natural Language Processing(https://ruder.io/a-review-of-the-recent-history-of-nlp/)
+
 网课：stanford cs224n；cmu cs 11-747
 
 书：统计自然语言处理（宗成庆），现代自然语言生成（黄民烈），自然语言处理：基于预训练模型的方法（车万翔）
@@ -121,7 +123,17 @@ Neural Architectures for Named Entity Recognition (https://arxiv.org/pdf/1603.01
 
 ### 任务四：Transformer
 
+以 BERT、GPT 为代表的预训练语言模型（Pretrain language model）的出现使 NLP 翻开了新的一页，目前的预训练语言模型大多基于 Transformer (大名鼎鼎的 Attention Is All You Need，截至2021年10月21日，citations 达到29343)，因此想要追踪前沿 NLP 技术，我们不得不对 Transformer 有深入的理解。
+
 请结合 Attention Is All You Need 原论文，读懂 The Annotated Transformer (http://nlp.seas.harvard.edu/2018/04/03/attention.html)
+
+同样建议阅读：
+了解 encoder-decoder 结构 https://huggingface.co/blog/encoder-decoder#encoder-decoder
+可视化 Transformer http://jalammar.github.io/illustrated-transformer/
+
+实践：我们在实践中通常会使用 HuggingFace🤗 的 transformers 库，transformers 教程：
+https://huggingface.co/course/
+此外遇到问题时我们通常会查看 transformers 的文档和源码：https://huggingface.co/transformers/master/index.html
 
 
 
