@@ -130,6 +130,7 @@ Neural Architectures for Named Entity Recognition (https://arxiv.org/pdf/1603.01
 同样建议阅读：
 了解 encoder-decoder 结构 https://huggingface.co/blog/encoder-decoder#encoder-decoder
 可视化 Transformer http://jalammar.github.io/illustrated-transformer/
+关于 decode https://huggingface.co/blog/how-to-generate
 
 实践：我们在实践中通常会使用 HuggingFace🤗 的 transformers 库，transformers 教程：
 https://huggingface.co/course/
