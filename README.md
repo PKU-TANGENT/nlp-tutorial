@@ -101,7 +101,9 @@ Recurrent Convolutional Neural Networks for Text Classification (https://www.dee
 
 在 NLP 中，结构预测（Structured Prediction）是指输出空间为结构化对象的一类任务，包括命名实体识别、关系抽取、共指消解等子任务，命名实体识别又属于序列标注问题。请实现简单的基于 LSTM-CRF 的命名实体识别
 
-任务描述 & 数据集：https://www.clips.uantwerpen.be/conll2003/ner/
+任务描述：https://www.clips.uantwerpen.be/conll2003/ner/
+
+数据集：CoNLL03 文件夹下
 
 参考文献：
 Neural Architectures for Named Entity Recognition (https://arxiv.org/pdf/1603.01360.pdf)
