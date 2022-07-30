@@ -158,7 +158,7 @@ NLP 包含哪些 topic 呢？同样是摘抄自 60th Annual Meeting of the Assoc
 
 通常我们也会按照上述流程和流程中出现的各个模块组织项目文件，一个项目往往会包含这些文件：主函数（入口，负责以上流程的控制），数据读取和预处理，模型，Metric。
 
-我们针对任务二，给出了一个 ChineseNER 完整项目的源代码。需注意，下面部分任务参考代码是以 Notebook 的形式组织的，在完成任务时，请参考 ChineseNER 重新组织代码。
+我们针对任务二，给出了一个 ChineseNER 完整项目的[源代码](https://github.com/PKU-TANGENT/nlp-tutorial/tree/main/ChineseNER)。需注意，下面部分任务参考代码是以 Notebook 的形式组织的，在完成任务时，请参考 ChineseNER 重新组织代码。
 
 ### 任务一：基于深度学习的文本分类
 
@@ -184,7 +184,7 @@ Recurrent Convolutional Neural Networks for Text Classification (https://www.dee
 参考文献：
 Neural Architectures for Named Entity Recognition (https://arxiv.org/pdf/1603.01360.pdf)
 
-为了简化任务难度，我们给出了基于 LSTM 的中文命名实体识别的代码，可参考该代码将其迁移至 CoNLL03 英文数据集上，进行实验观察初步结果，后续再增加 CRF 层。
+为了简化任务难度，我们给出了基于 LSTM 的中文命名实体识别的[代码](https://github.com/PKU-TANGENT/nlp-tutorial/tree/main/ChineseNER)，可参考该代码将其迁移至 CoNLL03 英文数据集上，进行实验观察初步结果，后续再增加 CRF 层。
 
 
 ### 任务三：Neural Machine Translation (NMT)
