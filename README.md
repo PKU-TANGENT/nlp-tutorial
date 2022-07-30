@@ -14,15 +14,14 @@
     - [前沿进展](#前沿进展)
     - [工具](#工具)
   - [动手实践](#动手实践)
+    - [写在前面](#写在前面-1)
     - [任务一：基于深度学习的文本分类](#任务一基于深度学习的文本分类)
     - [任务二：基于 LSTM-CRF 的命名实体识别](#任务二基于-lstm-crf-的命名实体识别)
-    - [任务三：新闻标题生成](#任务三新闻标题生成)
-    - [任务四：Transformer](#任务四transformer)
+    - [任务三：Neural Machine Translation (NMT)](#任务三neural-machine-translation-nmt)
+    - [任务四：Transformer & PLM](#任务四transformer--plm)
   - [本仓库的使用说明](#本仓库的使用说明)
 
 ## 写在前面
-
-（非劝退hhhh）在你看以下内容之前，请确保你有：
 
 相信大家经过几年的学习，已经拥有了以下的技能：
 1. 优秀的信息检索能力，无论是在论文阅读、写代码、使用服务器、写论文等过程中都有可能遇到各种各样的问题，在询问他人之前，请善用搜索
@@ -120,7 +119,7 @@ NLP 包含哪些 topic 呢？同样是摘抄自 60th Annual Meeting of the Assoc
 
 我们主要阅读国际会议论文，相关的会议有：
 
-- 自然语言处理相关会议：ACL, EMNLP, NAACL, COLING（按影响排序）
+- 自然语言处理相关会议：ACL, EMNLP, NAACL, COLING（按影响力排序）
 - ML 理论：ICML, NeurIPS, ICLR
 - AI 应用：AAAI, IJCAI（这两个会议近年来影响力下降）
 
@@ -145,11 +144,29 @@ NLP 包含哪些 topic 呢？同样是摘抄自 60th Annual Meeting of the Assoc
 
 ## 动手实践
 
+作为计算机科学的一个分支，NLP 同样离不开代码，请有志加入 TANGENT 的同学完成以下练习任务。
+
+### 写在前面
+
+在完成这些任务之前，还是需要一些说明。
+
+一个深度学习项目的流程通常是这样的：
+1. 数据读取和预处理，得到 Dataset 和 DataLoader
+2. 构建 Model、Optimizer
+3. 使用随机梯度下降迭代优化模型参数
+4. 设置 Metric，对模型进行评测
+
+通常我们也会按照上述流程和流程中出现的各个模块组织项目文件，一个项目往往会包含这些文件：主函数（入口，负责以上流程的控制），数据读取和预处理，模型，Metric。
+
+我们针对任务二，给出了一个 ChineseNER 完整项目的源代码。需注意，下面部分任务参考代码是以 Notebook 的形式组织的，在完成任务时，请参考 ChineseNER 重新组织代码。
+
 ### 任务一：基于深度学习的文本分类
 
-文本分类是入门 NLP 的一个好的开始，同时 NLU（自然语言理解）任务本质上来说都可以归类为文本分类。请使用 CNN 或 RNN 完成 Kaggle 上一个简单的文本分类任务。
+文本分类是入门 NLP 的一个好的开始，同时 NLU（自然语言理解）任务本质上来说都可以归类为文本分类。请使用 CNN 或 RNN（LSTM） 完成 Kaggle 上一个简单的文本分类任务。
 
 任务描述 & 数据集：https://www.kaggle.com/c/sentiment-analysis-on-movie-reviews/
+
+Kaggle 里也有一些[代码](https://www.kaggle.com/competitions/sentiment-analysis-on-movie-reviews/code)可以参考，如：[LSTM 实现](https://www.kaggle.com/code/hanjoonchoe/movie-sentimental-analysis-lstm-pytorch)
 
 参考文献：
 Convolutional Neural Networks for Sentence Classification (https://aclanthology.org/D14-1181/)
@@ -162,40 +179,40 @@ Recurrent Convolutional Neural Networks for Text Classification (https://www.dee
 
 任务描述：https://www.clips.uantwerpen.be/conll2003/ner/
 
-数据集：CoNLL03 文件夹下
+数据集：本仓库 [CoNLL03](https://github.com/PKU-TANGENT/nlp-tutorial/tree/main/CoNLL03) 文件夹下
 
 参考文献：
 Neural Architectures for Named Entity Recognition (https://arxiv.org/pdf/1603.01360.pdf)
 
-建议：循序渐进，先实现 LSTM NER 模型，再在其基础上加上 CRF 层。
+为了简化任务难度，我们给出了基于 LSTM 的中文命名实体识别的代码，可参考该代码将其迁移至 CoNLL03 英文数据集上，进行实验观察初步结果，后续再增加 CRF 层。
 
 
-### 任务三：新闻标题生成
+### 任务三：Neural Machine Translation (NMT)
 
-摘要和翻译是文本生成中比较主流的两大任务，在这里我们选取一个简单的新闻标题生成任务作为入门项目。
+摘要和翻译是文本生成中比较主流的两大任务，在这里我们选取 PyTorch tutorial 中的文本翻译作为入门项目。
 
-数据地址： http://www.sogou.com/labs/resource/cs.php   完整版(648M)
+请按照 [PyTorch 文本翻译教程](https://pytorch.org/tutorials/intermediate/seq2seq_translation_tutorial.html)，一步步实现一个简单的文本翻译模型，注意请参考 ChineseNER 的组织方式重构代码。
 
-参考文献：Generating News Headlines with Recurrent Neural Networks (https://arxiv.org/abs/1512.01712)
-
-可以先基于RNN实现上述模型，在算力允许的情况下再尝试预训练模型。
+生成任务涉及到的细节较多，如 encoder-decoder，teacher forcing，beam search 等，tutorial 中给出了深入浅出的介绍，请仔细阅读并理解。
 
 
 
-### 任务四：Transformer
+### 任务四：Transformer & PLM
 
-以 BERT、GPT 为代表的预训练语言模型（Pretrain language model）的出现使 NLP 翻开了新的一页，目前的预训练语言模型大多基于 Transformer (大名鼎鼎的 Attention Is All You Need，截至2021年10月21日，citations 达到29343)，因此想要追踪前沿 NLP 技术，我们不得不对 Transformer 有深入的理解。
+以 BERT、GPT 为代表的预训练语言模型（Pretrain Language Model，PLM）的出现使 NLP 翻开了新的一页，目前的预训练语言模型大多基于 Transformer，因此想要追踪前沿 NLP 技术，我们不得不对 Transformer 有深入的理解。
 
-请结合 Attention Is All You Need 原论文，读懂 The Annotated Transformer (http://nlp.seas.harvard.edu/2018/04/03/attention.html)
+请结合 Attention Is All You Need 原论文，读懂 [The Annotated Transformer](http://nlp.seas.harvard.edu/2018/04/03/attention.html)
 
-同样建议阅读：
-了解 encoder-decoder 结构 https://huggingface.co/blog/encoder-decoder#encoder-decoder
-可视化 Transformer http://jalammar.github.io/illustrated-transformer/
-关于 decode https://huggingface.co/blog/how-to-generate
+建议继续阅读：
+[encoder-decoder 结构](https://huggingface.co/blog/encoder-decoder#encoder-decoder)
+[可视化 Transformer](http://jalammar.github.io/illustrated-transformer/)
+[关于 decode](https://huggingface.co/blog/how-to-generate)
 
-实践：我们在实践中通常会使用 HuggingFace🤗 的 transformers 库，transformers 教程：
-https://huggingface.co/course/
-此外遇到问题时我们通常会查看 transformers 的文档和源码：https://huggingface.co/transformers/master/index.html
+关于预训练语言模型，请阅读 BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding 并做阅读笔记，重点关注 BERT 是如何训练出来的，以及如何将 BERT 应用于下游任务。
+
+我们在实践中通常会使用 HuggingFace🤗 的 Transformers 库，该库提供了包括 BERT 和 GPT 在内的常见预训练语言模型，代码风格较好，[文档](https://huggingface.co/docs/transformers/main/index)详细。我们可以通过 [Transformers 教程](https://huggingface.co/course/)进行学习。
+
+完成本小节任务后，如果学有余力，可尝试基于 Transformers 库，实现基于 BERT 的文本分类和 NER。
 
 
 
