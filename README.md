@@ -13,6 +13,7 @@
     - [会议论文](#会议论文)
     - [前沿进展](#前沿进展)
     - [工具](#工具)
+    - [开源代码](#开源代码)
   - [动手实践](#动手实践)
     - [写在前面](#写在前面-1)
     - [任务一：基于深度学习的文本分类](#任务一基于深度学习的文本分类)
@@ -50,8 +51,8 @@
 如果想更深地了解：
 * 网课：[机器学习白板推导](https://www.bilibili.com/video/BV1aE411o7qd)
 * 书
-  * [Pattern Recognition And Machine Learning](https://www.cs.uoi.gr/~arly/courses/ml/tmp/Bishop_book.pdf) (PRML)，以贝叶斯的视角介绍机器学习算法。本书成书于2012年，由于近年来深度学习飞速发展，该作者又相继推出了 [Probabilistic Machine Learning: An Introduction](https://github.com/probml/pml-book) 和 [Probabilistic Machine Learning: Advanced Topics](https://github.com/probml/pml2-book)
-  * Machine Learning: A Probabilistic Prospective (MLAPP)，机器学习的百科全书，同样偏重贝叶斯视角
+  * [Pattern Recognition And Machine Learning](https://www.cs.uoi.gr/~arly/courses/ml/tmp/Bishop_book.pdf) (PRML)，以贝叶斯的视角介绍机器学习算法。
+  * Machine Learning: A Probabilistic Prospective (MLAPP)，机器学习的百科全书，同样偏重贝叶斯视角。原书成书于2012年，该作者又相继推出了 [Probabilistic Machine Learning: An Introduction](https://github.com/probml/pml-book) 和 [Probabilistic Machine Learning: Advanced Topics](https://github.com/probml/pml2-book)
   * The Elements of Statistical Learning (ESL)，频率派
 
 ### 深度学习
@@ -99,7 +100,9 @@ NLP 包含哪些 topic 呢？同样是摘抄自 60th Annual Meeting of the Assoc
 
 可以看到 NLP 这个语言学和计算机科学的交叉学科实在是包含了太多的研究方向，而其中除了机器翻译（MT）、摘要、QA 这些大家早有耳闻的应用，剩下的相信初学者大多从未听说过，即使是一位 NLP 研究者或从业人员也只能对这个列表中的某一个或几个方面有深入的研究。
 
-想要对 NLP 是研究什么的有个大致的了解，首先我们可以快速了解深度学习时代 NLP 发展历史：[A Review of the Neural History of Natural Language Processing](https://ruder.io/a-review-of-the-recent-history-of-nlp/)，然后我们可以通过课程或书籍进行系统的学习：
+
+想要对 NLP 是研究什么的有个大致的了解，首先我们可以快速了解深度学习时代 NLP 发展历史：A Review of the Neural History of Natural Language Processing(https://ruder.io/a-review-of-the-recent-history-of-nlp/ )，然后我们可以通过课程或书籍进行系统的学习：
+
 * 网课：
   * [Stanford cs224n](https://web.stanford.edu/class/cs224n/)（强烈推荐，主讲人是绝对的大牛 Christopher Manning，此课程从深度学习的角度出发对 NLP 进行全面的介绍，而其中的 talk 又涉及学术最前沿的进展，可谓广度与深度俱全）
   * CMU CS 11-747
@@ -123,7 +126,7 @@ NLP 包含哪些 topic 呢？同样是摘抄自 60th Annual Meeting of the Assoc
 - ML 理论：ICML, NeurIPS, ICLR
 - AI 应用：AAAI, IJCAI（这两个会议近年来影响力下降）
 
-其中，ACL 系会议提供 anthology (https://aclweb.org/anthology/)
+其中，ACL 系会议提供 anthology (https://aclweb.org/anthology/)，可以方便地查找历年自然语言处理领域的论文
 
 ### 前沿进展
 
@@ -138,13 +141,16 @@ NLP 包含哪些 topic 呢？同样是摘抄自 60th Annual Meeting of the Assoc
 
 初学时做好论文笔记，可以使用 Markdown，也可以使用 Notion、Obsidian、OneNote 等笔记软件
 
+### 开源代码
 
+随着时代的进步，越来越多的工作会开源代码，便于其他研究者 follow 和复现实验。开源链接（GitHub 链接）一般会在论文中出现，可以在论文中 `Ctrl-F` 搜索 “github” 快速定位开源链接。
 
+Git 和 GitHub 基本操作请自行学习。如果在复现论文的过程中出现问题，可以在开源代码的 Issues 中提问，在复现之前也应当先查看 Issues，免得踩别人踩过的坑。
 
 
 ## 动手实践
 
-作为计算机科学的一个分支，NLP 同样离不开代码，请有志加入 TANGENT 的同学完成以下练习任务。
+作为计算机科学的一个分支，NLP 同样离不开 coding，请有志加入 TANGENT 的同学完成以下练习任务。
 
 ### 写在前面
 
@@ -158,7 +164,11 @@ NLP 包含哪些 topic 呢？同样是摘抄自 60th Annual Meeting of the Assoc
 
 通常我们也会按照上述流程和流程中出现的各个模块组织项目文件，一个项目往往会包含这些文件：主函数（入口，负责以上流程的控制），数据读取和预处理，模型，Metric。
 
-我们针对任务二，给出了一个 ChineseNER 完整项目的源代码。需注意，下面部分任务参考代码是以 Notebook 的形式组织的，在完成任务时，请参考 ChineseNER 重新组织代码。
+我们针对任务二，给出了一个 ChineseNER 完整项目的[源代码](https://github.com/PKU-TANGENT/nlp-tutorial/tree/main/ChineseNER)。
+
+需注意，下面部分任务参考代码是以 Notebook 的形式组织的，在完成任务时，请参考 ChineseNER 重新组织代码。
+
+此外还有科研工作者的老大难问题：环境配置，在进行以下任务之前，请在个人电脑或服务器配置好 Anaconda 或 miniconda，新建环境，并安装最新版 PyTorch
 
 ### 任务一：基于深度学习的文本分类
 
@@ -184,7 +194,7 @@ Recurrent Convolutional Neural Networks for Text Classification (https://www.dee
 参考文献：
 Neural Architectures for Named Entity Recognition (https://arxiv.org/pdf/1603.01360.pdf)
 
-为了简化任务难度，我们给出了基于 LSTM 的中文命名实体识别的代码，可参考该代码将其迁移至 CoNLL03 英文数据集上，进行实验观察初步结果，后续再增加 CRF 层。
+为了简化任务难度，我们给出了基于 LSTM 的中文命名实体识别的[代码](https://github.com/PKU-TANGENT/nlp-tutorial/tree/main/ChineseNER)，配置好 PyTorch 环境后，从 `ChineseNER/train.py` 即可直接运行。可参考该代码将其迁移至 CoNLL03 英文数据集上，进行实验观察初步结果，后续再增加 CRF 层。
 
 
 ### 任务三：Neural Machine Translation (NMT)
@@ -220,4 +230,4 @@ Neural Architectures for Named Entity Recognition (https://arxiv.org/pdf/1603.01
 
 1. 有问题就提在issues里面，同理你也可以在issues里面检索是否已经有你遇到的问题；
 2. main分支无法直接修改，所有修改均需要通过提交`Pull requests`来实现，必须选择至少一个reviewer，推荐选择大师兄`Yifan-Song793`来review；
-3. git commit的规范看[这里](https://juejin.cn/post/6844903793033756680)，禁止使用意义不明的test、add等语句。
+3. git commit的规范看[这里](https://juejin.cn/post/6844903793033756680)。
