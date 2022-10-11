@@ -100,7 +100,9 @@ NLP 包含哪些 topic 呢？同样是摘抄自 60th Annual Meeting of the Assoc
 
 可以看到 NLP 这个语言学和计算机科学的交叉学科实在是包含了太多的研究方向，而其中除了机器翻译（MT）、摘要、QA 这些大家早有耳闻的应用，剩下的相信初学者大多从未听说过，即使是一位 NLP 研究者或从业人员也只能对这个列表中的某一个或几个方面有深入的研究。
 
+
 想要对 NLP 是研究什么的有个大致的了解，首先我们可以快速了解深度学习时代 NLP 发展历史：A Review of the Neural History of Natural Language Processing(https://ruder.io/a-review-of-the-recent-history-of-nlp/ )，然后我们可以通过课程或书籍进行系统的学习：
+
 * 网课：
   * [Stanford cs224n](https://web.stanford.edu/class/cs224n/)（强烈推荐，主讲人是绝对的大牛 Christopher Manning，此课程从深度学习的角度出发对 NLP 进行全面的介绍，而其中的 talk 又涉及学术最前沿的进展，可谓广度与深度俱全）
   * CMU CS 11-747
