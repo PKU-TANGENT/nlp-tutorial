@@ -20,6 +20,10 @@
     - [任务二：基于 LSTM-CRF 的命名实体识别](#任务二基于-lstm-crf-的命名实体识别)
     - [任务三：Neural Machine Translation (NMT)](#任务三neural-machine-translation-nmt)
     - [任务四：Transformer & PLM](#任务四transformer--plm)
+      - [基础知识](#基础知识-1)
+      - [Huggingface Transformers](#huggingface-transformers)
+      - [Huggingface Ecosystem](#huggingface-ecosystem)
+      - [基于Huggingface Trainer的分类任务](#基于huggingface-trainer的分类任务)
   - [本仓库的使用说明](#本仓库的使用说明)
 
 ## 写在前面
@@ -208,7 +212,7 @@ Neural Architectures for Named Entity Recognition (https://arxiv.org/pdf/1603.01
 
 
 ### 任务四：Transformer & PLM
-
+#### 基础知识
 以 BERT、GPT 为代表的预训练语言模型（Pretrain Language Model，PLM）的出现使 NLP 翻开了新的一页，目前的预训练语言模型大多基于 Transformer，因此想要追踪前沿 NLP 技术，我们不得不对 Transformer 有深入的理解。
 
 请结合 Attention Is All You Need 原论文，读懂 [The Annotated Transformer](http://nlp.seas.harvard.edu/2018/04/03/attention.html)
@@ -219,10 +223,25 @@ Neural Architectures for Named Entity Recognition (https://arxiv.org/pdf/1603.01
 [关于 decode](https://huggingface.co/blog/how-to-generate)
 
 关于预训练语言模型，请阅读 BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding 并做阅读笔记，重点关注 BERT 是如何训练出来的，以及如何将 BERT 应用于下游任务。
+#### Huggingface Transformers
+我们在实践中通常会使用 HuggingFace🤗 的 Transformers 库，该库提供了包括 BERT 和 GPT 在内的常见预训练语言模型，代码风格较好，[文档](https://huggingface.co/docs/transformers/main/index)详细。我们可以通过 [Transformers 教程](https://huggingface.co/course/)进行学习。重点读懂:
+- [transformers.models.modeling_bert](https://github.com/huggingface/transformers/blob/main/src/transformers/models/bert/modeling_bert.py)
+#### Huggingface Ecosystem
+在编写机器学习代码时，我们往往会套用成熟的模板作为训练流程的框架。目前，Huggingface所提供的Trainer框架是很好的选择。另外，Huggingface的开源生态较为完善 (包括但不限于datasets, evaluate, tokenizers (一般与Transformers绑定), diffusers, huggingface-hub, accelerate)。事实上，选择Huggingface Ecosystem可以很大程度统一代码风格，从而促进合作开发。
+#### 基于Huggingface Trainer的分类任务
+Huggingface Transformers仓库中给出了许多示例代码，其中一个非常泛用的模板可以在这里找到:
 
-我们在实践中通常会使用 HuggingFace🤗 的 Transformers 库，该库提供了包括 BERT 和 GPT 在内的常见预训练语言模型，代码风格较好，[文档](https://huggingface.co/docs/transformers/main/index)详细。我们可以通过 [Transformers 教程](https://huggingface.co/course/)进行学习。
+https://github.com/huggingface/transformers/tree/28a0811652c680078503a56703327f267b9bdb9a/examples/pytorch/text-classification
 
-完成本小节任务后，如果学有余力，可尝试基于 Transformers 库，实现基于 BERT 的文本分类和 NER。
+不同版本的Transformers可能会对代码有删改，推荐学习v4.22.0之后的版本。具体的目标包括:
+- 跑通GLUE训练代码
+- Debug代码，尤其关注
+  - 如何继承`PretrainedModel` 并定制Model, 参考 [BertForSequenceClassification](https://github.com/huggingface/transformers/blob/main/src/transformers/models/bert/modeling_bert.py#L1506)
+  - [`Trainer._inner_training_loop`](https://github.com/huggingface/transformers/blob/main/src/transformers/trainer.py#L1507-L1891) 中的主要逻辑
+  - [`TrainingArguments`](https://github.com/huggingface/transformers/blob/main/src/transformers/training_args.py#L121) 中已经实现好，并且涉及到的主要参数
+- 尝试使用`transformers`集成的`tensorboard`或者`wandb`功能可视化训练过程
+- 尝试魔改`evaluate`及其调用的子方法，实现训练过程中更多指标的可视化
+<!-- 完成本小节任务后，如果学有余力，可尝试基于 Transformers 库，实现基于 BERT 的文本分类和 NER。 -->
 
 
 
